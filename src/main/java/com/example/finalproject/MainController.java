@@ -4,12 +4,21 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class MainController {
+    WordGenerator wordGenerator = new WordGenerator();
     @FXML
-    private Label welcomeText;
-
+    private Label givenSentence;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Label userInp;
+
+    @FXML
+    public void initialize() {
+        givenSentence.setText(wordGenerator.level1_stage1());
     }
+    void done() {
+        Details details = new Details(userInp.getText());
+        userInp.setText(" ");
+
+    }
+
 }

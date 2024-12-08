@@ -29,14 +29,17 @@ public class Details {
     public void setErrorCount(){
         for (int i = 0; i < user_input.length(); i++) {
 
-            if (user_input.charAt(i) != givenSentence.)
+            if (user_input.charAt(i) != givenSentence.level1_stage1().charAt(i)){
+                errorCount ++;
+            }
+
         }
     }
     public double getAccuracy(){
         return this.Accuracy;
     }
     public double getWpm(){
-        return user_type.length()/user_type.length();
+        return user_input.length()/user_input.length();
     }
     public double getCharacterCount(){
         return this.characterCount;
