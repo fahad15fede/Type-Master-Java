@@ -1,0 +1,40 @@
+.game-background {
+    -fx-background-color: #1A1A1A;
+}
+
+.text-color {
+    -fx-text-fill: #FFFFFF;
+}
+
+.transparent {
+    -fx-background-color: rgb(0,0,0,0);
+}
+
+.logo-text {
+    -fx-text-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.rounded {
+    -fx-border-radius: 10px;
+}
+
+.border {
+    -fx-border-color: #2F2F2F;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+.table-border {
+    -fx-border-top: 2px solid #2F2F2F;
+    -fx-border-bottom: 2px solid #2F2F2F;
+    -fx-border-radius: 10px;
+}
+
+
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+
+

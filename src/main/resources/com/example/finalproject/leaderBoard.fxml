@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" styleClass="game-background" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.LeaderboardController">
+    <children>
+        <Label alignment="CENTER" layoutX="4.0" layoutY="37.0" prefHeight="61.0" prefWidth="1321.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="LeaderBoard" textFill="WHITE">
+            <font>
+                <Font name="Arial Black" size="48.0" />
+            </font>
+        </Label>
+        <Group layoutX="487.0" layoutY="399.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="144.0" layoutY="43.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="117.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="251.0" layoutX="117.0" layoutY="-64.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="117.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="116.0" layoutX="234.0" layoutY="71.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="117.0" />
+                <Label layoutY="-35.0" text="2nd" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="272.0" layoutY="-35.0" text="3rd" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="36.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="107.0" fitWidth="112.0" layoutX="251.0" layoutY="-117.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../pngtree-bronze-crown-decorated-with-yellow-sapphires-antiques-png-image_10120803-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="63.0" fitWidth="117.0" layoutX="-12.0" layoutY="-96.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../pngtree-silver-crown-on-white-image-clip-isolated-vector-png-image_36976608-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="142.0" layoutY="-139.0" text="1st" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="36.0" />
+                    </font>
+                </Label>
+            </children>
+        </Group>
+        <ImageView fitHeight="78.0" fitWidth="130.0" layoutX="595.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../pngtree-3d-texture-golden-crown-png-image_4364634-removebg-preview.png" />
+            </image>
+        </ImageView>
+        <Circle layoutX="477.0" layoutY="516.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.4393518567085266" green="1.0" blue="0.19907407462596893" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" green="1.0" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill></Circle>
+        <Label alignment="CENTER" layoutX="112.0" layoutY="451.0" prefHeight="130.0" prefWidth="213.0" stylesheets="@../../../Style.css" text="Player 2">
+            <styleClass>
+                <String fx:value="border" />
+                <String fx:value="text-color" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="24.0" />
+            </font></Label>
+        <Circle layoutX="663.0" layoutY="598.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.4393518567085266" green="1.0" blue="0.19907407462596893" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" green="1.0" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Circle>
+        <Circle layoutX="848.0" layoutY="517.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.4393518567085266" green="1.0" blue="0.19907407462596893" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" green="1.0" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Circle>
+        <Line endX="100.0" layoutX="887.0" layoutY="517.0" startX="-28.0" stroke="WHITE" strokeWidth="2.0" />
+        <Line endX="66.0" endY="34.0" layoutX="597.0" layoutY="693.0" startX="66.0" startY="-84.0" stroke="WHITE" strokeWidth="2.0" />
+        <Label alignment="CENTER" layoutX="558.0" layoutY="728.0" prefHeight="130.0" prefWidth="213.0" stylesheets="@../../../Style.css" text="Player 1">
+            <styleClass>
+                <String fx:value="border" />
+                <String fx:value="text-color" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="988.0" layoutY="453.0" prefHeight="130.0" prefWidth="213.0" stylesheets="@../../../Style.css" text="Player 3">
+            <styleClass>
+                <String fx:value="border" />
+                <String fx:value="text-color" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="24.0" />
+            </font>
+        </Label>
+        <Line endX="106.0" layoutX="361.0" layoutY="516.0" startX="-35.0" stroke="WHITE" strokeWidth="2.0" />
+    </children>
+</AnchorPane>
