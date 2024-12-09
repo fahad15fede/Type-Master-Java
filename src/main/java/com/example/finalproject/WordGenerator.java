@@ -17,10 +17,9 @@ public class WordGenerator {
         fourLetterword[3]="Sore";
         fourLetterword[4]="Yolk";
         fourLetterword[5]="Aura";
-        fourLetterword[6]="Riza";
 
 
-        int i = (int) (Math.random() * 6) + 1;
+        int i = (int) (Math.random() * 5) + 1;
 
 
         return fourLetterword[i];
@@ -35,9 +34,8 @@ public class WordGenerator {
         fourLetterword[4]="Coal";
         fourLetterword[5]="Dole";
         fourLetterword[6]="Mole";
-        fourLetterword[7]="Sour";
 
-        int i = (int) (Math.random() * 7) + 1;
+        int i = (int) (Math.random() * 6) + 1;
 
 
         return fourLetterword[i];
@@ -108,12 +106,13 @@ public class WordGenerator {
         complexSentence[4] = "Whenever the server logs displayed activity from sysadmin123@corp.net, the team investigated it for potential unauthorized access attempts.";
 
 
-           int i = (int) (Math.random() * 5) + 1;
+           int i = (int) (Math.random() * 4) + 1;
            return complexSentence[i];
 
 
 
     }
 
+    public String [] levels = {level1_stage1() , level1_stage2() , level2_stage1() , level2_stage2() , level3_stage1() , level3_stage2() , level4_stage1()};
 
 }

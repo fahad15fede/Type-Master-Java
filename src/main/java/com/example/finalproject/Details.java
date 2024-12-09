@@ -3,13 +3,13 @@ package com.example.finalproject;
 public class Details {
     private double Accuracy;
     private double wpm;
-    private double errorCount;
-    private double characterCount;
+    public static double errorCount;
+    private static double characterCount;
     private long timetaken;
 
     String user_input;
 
-    WordGenerator givenSentence=new WordGenerator();
+    WordGenerator givenSentence = new WordGenerator();
 
     Details(){
 
@@ -20,7 +20,7 @@ public class Details {
 
     public void setAccuracy() {
 
-        Accuracy = (getErrorCount()/getCharacterCount())*100;
+        Accuracy = (((getCharacterCount()-getErrorCount())/getCharacterCount())*100);
     }
 
     public double getErrorCount() {
@@ -32,6 +32,19 @@ public class Details {
             if (user_input.charAt(i) != givenSentence.level1_stage1().charAt(i)){
                 errorCount ++;
             }
+//            if (user_input.charAt(i) != givenSentence.level1_stage2().charAt(i)){
+//                errorCount ++;
+//            }if (user_input.charAt(i) != givenSentence.level2_stage1().charAt(i)){
+//                errorCount ++;
+//            }if (user_input.charAt(i) != givenSentence.level2_stage2().charAt(i)){
+//                errorCount ++;
+//            }if (user_input.charAt(i) != givenSentence.level3_stage1().charAt(i)){
+//                errorCount ++;
+//            }if (user_input.charAt(i) != givenSentence.level3_stage2().charAt(i)){
+//                errorCount ++;
+//            }if (user_input.charAt(i) != givenSentence.level4_stage1().charAt(i)){
+//                errorCount ++;
+//            }
 
         }
     }
@@ -42,9 +55,9 @@ public class Details {
         return user_input.length()/user_input.length();
     }
     public double getCharacterCount(){
-        return this.characterCount;
+        return characterCount;
     }
     public void setCharacterCount(){
-        characterCount=user_input.length();
+        characterCount+=user_input.length();
     }
 }
