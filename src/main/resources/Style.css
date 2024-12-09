@@ -1,3 +1,8 @@
+.anchor-pane {
+    -fx-pref-width: 400px;
+    -fx-pref-height: 300px;
+}
+
 .game-background {
     -fx-background-color: #1A1A1A;
 }
