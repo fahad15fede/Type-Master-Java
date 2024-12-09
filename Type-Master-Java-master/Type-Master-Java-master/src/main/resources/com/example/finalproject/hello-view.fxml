@@ -13,7 +13,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="game-background" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.MainController">
   <children>
@@ -118,37 +117,37 @@
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label fx:id="wordCount" layoutX="599.0" layoutY="343.0" text="0" textFill="WHITE">
+    <Label fx:id="wordCount" layoutX="599.0" layoutY="343.0" textFill="WHITE">
       <font>
         <Font name="System Bold" size="32.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="557.0" layoutY="426.0" prefHeight="27.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="words/min">
+    <Label alignment="CENTER" layoutX="557.0" layoutY="426.0" prefHeight="27.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Words/min">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label fx:id="charCount" layoutX="750.0" layoutY="344.0" text="0" textFill="WHITE">
+    <Label fx:id="totalChar" layoutX="750.0" layoutY="344.0" textFill="WHITE">
       <font>
         <Font name="System Bold" size="32.0" />
       </font>
     </Label>
-    <Label fx:id="accuracyPercent" layoutX="903.0" layoutY="344.0" text="0" textFill="WHITE">
+    <Label fx:id="totalErrors" layoutX="903.0" layoutY="344.0" textFill="WHITE">
       <font>
         <Font name="System Bold" size="32.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="710.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="chars/min">
+    <Label alignment="CENTER" layoutX="710.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Total char">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="862.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="\% accuracy">
+    <Label alignment="CENTER" layoutX="862.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Error Count">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <TextField fx:id="userInput" alignment="CENTER" layoutX="65.0" layoutY="749.0" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="693.0" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
       <styleClass>
         <String fx:value="game-background" />
         <String fx:value="border" />
@@ -158,16 +157,26 @@
         <Font size="20.0" />
       </font>
     </TextField>
-    <TextFlow fx:id="givenSentence" layoutX="71.0" layoutY="520.0" prefHeight="200.0" prefWidth="1190.0" stylesheets="@../../../Style.css" textAlignment="CENTER">
-      <padding>
-        <Insets left="15.0" top="10.0" />
-      </padding>
+      <Button layoutX="71.0" layoutY="466.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
          <styleClass>
             <String fx:value="border" />
+            <String fx:value="game-background" />
             <String fx:value="text-color" />
          </styleClass>
-    </TextFlow>
-      <Button layoutX="684.0" layoutY="841.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="givenSentence" layoutX="71.0" layoutY="520.0" prefHeight="126.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+         <styleClass>
+            <String fx:value="text-color" />
+            <String fx:value="border" />
+         </styleClass>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="242.0" layoutY="466.0" mnemonicParsing="false" onAction="#forAccuracy" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />

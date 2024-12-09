@@ -99,11 +99,11 @@ public class WordGenerator {
     public String level4_stage1(){
         String [] complexSentence= new String[5];
 
-        complexSentence[0]="Although the email address john.doe2024@example.com seemed legitimate, the IT department flagged it as suspicious due to its recent creation date.";
+        complexSentence[0]="Although the email address john.doe2024@example.com seemed legitimate, the IT department flagged it as suspicious due to its recent.";
         complexSentence[1]="Since the activation link was sent to user.alpha123@domain.org, he had to check his spam folder to ensure it wasn’t missed.";
-        complexSentence[2]="Even though the registration form accepted her username, Luna_987, the associated email, luna98!test@mailservice.com, failed verification due to a formatting error.";
+        complexSentence[2]="Even though the registration form accepted her username, Luna_987, the associated email, luna98!test@mailservice.com, failed.";
         complexSentence[3] = "If you forget your login credentials for admin@secureportal.net, you can request a password reset using your backup email.";
-        complexSentence[4] = "Whenever the server logs displayed activity from sysadmin123@corp.net, the team investigated it for potential unauthorized access attempts.";
+        complexSentence[4] = "Whenever the server logs displayed activity from sysadmin123@corp.net, the team investigated it for potential unauthorized access.";
 
 
            int i = (int) (Math.random() * 4) + 1;
