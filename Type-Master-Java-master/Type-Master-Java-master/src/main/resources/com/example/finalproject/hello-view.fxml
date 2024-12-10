@@ -107,7 +107,7 @@
       </font>
     </Label>
     <Circle fill="#1a1a1a" layoutX="397.0" layoutY="366.0" radius="68.0" stroke="#99ff84" strokeType="INSIDE" strokeWidth="5.0" />
-    <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutX="379.0" layoutY="326.0" styleClass="text-color" stylesheets="@../../../Style.css" text="60" textAlignment="CENTER" textFill="WHITE">
+    <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutX="379.0" layoutY="326.0" styleClass="text-color" stylesheets="@../../../Style.css" textAlignment="CENTER" textFill="WHITE">
       <font>
         <Font name="System Bold" size="32.0" />
       </font>
@@ -147,7 +147,7 @@
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="693.0" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="693.0" onKeyPressed="#keyTyped" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
       <styleClass>
         <String fx:value="game-background" />
         <String fx:value="border" />
@@ -157,7 +157,7 @@
         <Font size="20.0" />
       </font>
     </TextField>
-      <Button layoutX="71.0" layoutY="466.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
+      <Button fx:id="btn" layoutX="71.0" layoutY="466.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />
@@ -176,7 +176,7 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="242.0" layoutY="466.0" mnemonicParsing="false" onAction="#forAccuracy" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
+      <Button layoutX="242.0" layoutY="466.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />
