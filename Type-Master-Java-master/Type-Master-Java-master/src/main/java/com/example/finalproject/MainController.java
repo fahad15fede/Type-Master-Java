@@ -40,36 +40,32 @@ public class MainController {
     private Label turn;
 
 
+       public static int i = 0 ;
     @FXML
     public void initialize() {
         turn.setText("Player1");
-        givenSentence.setText(" " + wordGenerator.levels1[0]);
-        totalChar.setText(Integer.toString(Details.characterCount1));
-        totalErrors.setText(Integer.toString(Details.errorCountp1));
+        givenSentence.setText(" " + wordGenerator.levels3[0]);
+        totalChar.setText(Integer.toString(Player1.characterCount));
+        totalErrors.setText(Integer.toString(Player1.errorCount));
     }
 
 
-       public static int i = 0 ;
         public Details details;
     @FXML
     void onNext(ActionEvent event)  {
-//         int k = new Details().getUserChoice();
 
 
         if(Details.userChoice == 1) {
-
-            totalChar.setText(Integer.toString(Details.characterCount1));
-            totalErrors.setText(Integer.toString(Details.errorCountp1));
             if (i < 7) {
                 String user_type = userInput.getText();
-                details = new Details( wordGenerator.levels1[i] ,user_type );
-                totalChar.setText(Integer.toString(Details.characterCount1));
-                totalErrors.setText(Integer.toString(Details.errorCountp1));
+                details = new Details( wordGenerator.levels3[i] ,user_type );
+                totalChar.setText(Integer.toString(Player1.characterCount));
+                totalErrors.setText(Integer.toString(Player1.errorCount));
                 if( i == 6 ){
-                    givenSentence.setText(" " + wordGenerator.levels1[i]);
+                    givenSentence.setText(" " + wordGenerator.levels3[i]);
                     btn.setVisible(false);
                 }else{
-                    givenSentence.setText(" " + wordGenerator.levels1[i+1]);
+                    givenSentence.setText(" " + wordGenerator.levels3[i+1]);
 
                 }
 
@@ -82,25 +78,25 @@ public class MainController {
             if (i < 14) {
 
                 String user_type = userInput.getText();
-                details = new Details( wordGenerator.levels2[i] ,user_type );
+                details = new Details( wordGenerator.levels3[i] ,user_type );
                 if( i == 13 ){
-                    givenSentence.setText(" " + wordGenerator.levels2[i]);
+                    givenSentence.setText(" " + wordGenerator.levels3[i]);
                     btn.setVisible(false);
                 }else{
-                    givenSentence.setText(" " + wordGenerator.levels2[i+1]);
+                    givenSentence.setText(" " + wordGenerator.levels3[i+1]);
                 }
                 if (i == 6) stopTimer();
                 if(i < 7){
                     turn.setText("Player 1");
-                    totalChar.setText(Integer.toString(Details.characterCount1));
-                    totalErrors.setText(Integer.toString(Details.errorCountp1));
+                    totalChar.setText(Integer.toString(Player1.characterCount));
+                    totalErrors.setText(Integer.toString(Player1.errorCount));
                 }
 
                 if ( i >= 6 && i < 14){
 
                     turn.setText("Player 2");
-                    totalChar.setText(Integer.toString(Details.characterCount2));
-                    totalErrors.setText(Integer.toString(Details.errorCountp2));
+                    totalChar.setText(Integer.toString(Player2.characterCount));
+                    totalErrors.setText(Integer.toString(Player2.errorCount));
                 }
                 userInput.setText("");
                 i+=1;
@@ -113,9 +109,6 @@ public class MainController {
 
                 String user_type = userInput.getText();
                 details = new Details( wordGenerator.levels3[i] ,user_type );
-                totalChar.setText(Integer.toString(Details.characterCount3));
-                totalErrors.setText(Integer.toString(Details.errorCountp3));
-
                 if( i == 20 ){
                     givenSentence.setText(" " + wordGenerator.levels3[i]);
                     btn.setVisible(false);
@@ -128,20 +121,20 @@ public class MainController {
             if(i < 7){
 
                 turn.setText("Player 1");
-                totalChar.setText(Integer.toString(Details.characterCount1));
-                totalErrors.setText(Integer.toString(Details.errorCountp1));
+                totalChar.setText(Integer.toString(Player1.characterCount));
+                totalErrors.setText(Integer.toString(Player1.errorCount));
             }
             if ( i >= 6 && i < 14){
 
                 turn.setText("Player 2");
-                totalChar.setText(Integer.toString(Details.characterCount2));
-                totalErrors.setText(Integer.toString(Details.errorCountp2));
+                totalChar.setText(Integer.toString(Player2.characterCount));
+                totalErrors.setText(Integer.toString(Player2.errorCount));
             }
             if (i >= 13 && i < 21){
 
                 turn.setText("Player 3");
-                totalChar.setText(Integer.toString(Details.characterCount3));
-                totalErrors.setText(Integer.toString(Details.errorCountp3));
+                totalChar.setText(Integer.toString(Player3.characterCount));
+                totalErrors.setText(Integer.toString(Player3.errorCount));
             }
             userInput.setText("");
             i += 1;
