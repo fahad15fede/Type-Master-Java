@@ -176,7 +176,7 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="242.0" layoutY="466.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
+      <Button fx:id="result" layoutX="242.0" layoutY="466.0" mnemonicParsing="false" onAction="#showResult" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />

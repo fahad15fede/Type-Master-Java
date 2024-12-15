@@ -41,6 +41,8 @@ public class WordGenerator {
 
         return fourLetterword[i];
     }
+
+
     public String level1_stage2(){
         String [] fourLetterword = new String[7];
 
