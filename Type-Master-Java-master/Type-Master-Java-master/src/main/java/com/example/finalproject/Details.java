@@ -20,9 +20,7 @@ public class Details {
     public static double timetaken2 = 0;
     public static double timetaken3 = 0;
 
-    String test = "Hellloo";
 
-    private long timetaken;
 
     public String user_input;
     public String currentSentence;
@@ -41,64 +39,147 @@ public class Details {
         setErrorCount();
     }
 
+//    public void setAccuracy() {
+//        if(userChoice == 1)
+//            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
+//
+//        if(userChoice == 2){
+//            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
+//            accuracyp2 = (((double) (characterCount2 - errorCountp2) / characterCount2 *100));
+//        }
+//
+//        if(userChoice == 3){
+//            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
+//            accuracyp2 = (((double) (characterCount2 - errorCountp2) / characterCount2 *100));
+//            accuracyp3 = (((double) (characterCount3 - errorCountp3) / characterCount3*100));
+//        }
+//
+//    }
+
+
     public void setAccuracy() {
         if(userChoice == 1)
-            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
+            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
 
         if(userChoice == 2){
-            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
-            accuracyp2 = (((double) (characterCount2 - errorCountp2) / characterCount2 *100));
+            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
+            accuracyp2 = (((double) (Player2.characterCount - Player2.errorCount) / Player2.characterCount)*100);
         }
 
         if(userChoice == 3){
-            accuracyp1 = (((double) (characterCount1 - errorCountp1) / characterCount1 *100));
-            accuracyp2 = (((double) (characterCount2 - errorCountp2) / characterCount2 *100));
-            accuracyp3 = (((double) (characterCount3 - errorCountp3) / characterCount3*100));
+            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
+            accuracyp2 = (((double) (Player2.characterCount - Player2.errorCount) / Player2.characterCount)*100);
+            accuracyp3 = (((double) (Player3.characterCount - Player3.errorCount) / Player3.characterCount)*100);
         }
 
     }
 
-
     public double getErrorCount() {
-        if(userChoice == 1) return errorCountp1;
-        if(userChoice == 2) return errorCountp2;
-        if(userChoice == 3) return errorCountp3;
+        if(userChoice == 1) return Player1.errorCount;
+        if(userChoice == 2) return Player2.errorCount;
+        if(userChoice == 3) return Player3.errorCount;
         return 0;
     }
 
 
-
     public void setErrorCount(){
-            for (int i = 0; i < user_input.length(); i++) {
-                if (user_input.charAt(i) != currentSentence.charAt(i)) {
-                    if (userChoice == 1)
-                        errorCountp1++;
-                    if (userChoice == 2) {
-                        if(MainController.i < 7){
-                            errorCountp2++;
-                        }
-                        if(MainController.i>=7){
-                            errorCountp2++;
-                        }
+        for (int i = 0; i < user_input.length(); i++) {
+
+            if (user_input.charAt(i) != currentSentence.charAt(i)) {
+                if (userChoice == 1)
+                    Player1.errorCount++;
+                if (userChoice == 2) {
+                    if(MainController.i < 7){
+                        Player1.errorCount++;
                     }
-
-                    if (userChoice == 3) {
-
-                        if (MainController.i < 7) {
-                            errorCountp3++;
-                        }
-                        if (MainController.i > 6 && MainController.i < 14) {
-                            errorCountp3++;
-                        }
-                        if (MainController.i > 13 && MainController.i < 21) {
-                            errorCountp3++;
-                        }
+                    if(MainController.i>=7){
+                        Player2.errorCount++;
                     }
                 }
-//
 
+                if (userChoice == 3) {
+
+                    if (MainController.i < 7) {
+                        Player1.errorCount++;
+                    }
+                    if (MainController.i > 6 && MainController.i < 14) {
+                        Player2.errorCount++;
+                    }
+                    if (MainController.i > 13 && MainController.i < 21) {
+                        Player3.errorCount++;
+                    }
+                }
             }
+        }
     }
+
+
+
+
+
+
+
+
+
+//    public double getErrorCount() {
+//        if(userChoice == 1) return errorCountp1;
+//        if(userChoice == 2) return errorCountp2;
+//        if(userChoice == 3) return errorCountp3;
+//        return 0;
+//    }
+
+
+
+//    public void setErrorCount() {
+//            for (int i = 0; i < user_input.length(); i++) {
+//
+//                if (user_input.charAt(i) != currentSentence.charAt(i)) {
+//                    if (userChoice == 1)
+//                        errorCountp1++;
+//                    if (userChoice == 2) {
+//                        if(MainController.i < 7){
+//                            errorCountp1++;
+//                        }
+//                        if(MainController.i>=7){
+//                            errorCountp2++;
+//                        }
+//                    }
+//
+//                    if (userChoice == 3) {
+//
+//                        if (MainController.i < 7) {
+//                            errorCountp1++;
+//                        }
+//                        if (MainController.i > 6 && MainController.i < 14) {
+//                            errorCountp2++;
+//                        }
+//                        if (MainController.i > 13 && MainController.i < 21) {
+//                            errorCountp3++;
+//                        }
+//                    }
+//                }
+//
+//            }
+//    }
+
+
+    public double getAccuracyForTwoPlayers(int choice) {
+        if(choice == 1) {
+            return accuracyp1;
+        } else {
+            return accuracyp2;
+        }
+    }
+
+    public double getWpmForTwoPlayers(int choice) {
+        if(choice == 1) {
+            return characterCount1/(5.0 * timetaken1);
+        } else {
+            return (characterCount1)/(5.0 * timetaken2);
+        }
+    }
+
+
         public double getAccuracy(){
             if(userChoice == 1) return accuracyp1;
             if(userChoice == 2) return accuracyp2;
@@ -164,25 +245,47 @@ public class Details {
         this.timetaken3 = timetaken3/60;
     }
 
-//    public double getTimetaken1() {
-//        return timetaken1;
-//    }
-//    public double getTimetaken2() {
-//        return timetaken2;
-//    }
-//    public double getTimetaken3() {
-//        return timetaken3;
-//}
+    public double getTimetaken1() {
+        return timetaken1;
+    }
+    public double getTimetaken2() {
+        return timetaken2;
+    }
+    public double getTimetaken3() {
+        return timetaken3;
+    }
 
 
-    public double getWpm() {
-        if (userChoice == 1)
-            return characterCount1/(5.0 * timetaken1);
-        if (userChoice == 2)
-            return (characterCount1)/(5.0 * timetaken2);
-        if (userChoice == 3)
-            return (characterCount1)/(5.0 * timetaken3);
-        else return 0;
+//    public double getWpm() {
+//        if (userChoice == 1)
+//            return characterCount1/(5.0 * timetaken1);
+//        if (userChoice == 2)
+//            return (characterCount1)/(5.0 * timetaken2);
+//        if (userChoice == 3)
+//            return (characterCount1)/(5.0 * timetaken3);
+//        else return 0;
+//    }
+
+
+    public static double wpmP1 = 0;
+    public static double wpmP2 = 0;
+    public static double wpmP3 = 0;
+
+    public void setWpm() {
+        if (userChoice == 1) {
+            wpmP1 = (Player1.characterCount)/(5.0*getTimetaken1());
+        }
+
+        if (userChoice == 2) {
+            wpmP1 = (Player1.characterCount)/(5.0*getTimetaken1());
+            wpmP2 =  (Player2.characterCount)/(5.0*getTimetaken2());
+        }
+
+        if (userChoice == 3) {
+            wpmP1 = (Player1.characterCount)/(5.0*getTimetaken1());
+            wpmP2 =  (Player2.characterCount)/(5.0*getTimetaken2());
+            wpmP3 =  (Player3.characterCount)/(5.0*getTimetaken3());
+        }
     }
 
 
@@ -196,30 +299,60 @@ public class Details {
        if (userChoice == 3) return characterCount3;
        return 0;
     }
+
+//    public void setCharacterCount(){
+//        if (userChoice == 1)
+//            characterCount1 += user_input.length();
+//
+//        if (userChoice == 2){
+//
+//                if (MainController.i < 7)
+//                    characterCount1 += user_input.length();
+//
+//                else characterCount2 += user_input.length();
+//        }
+//
+//        if (userChoice == 3) {
+//
+//                if (MainController.i < 7)
+//                    characterCount1 += user_input.length();
+//
+//                if (MainController.i > 6 && MainController.i < 14)
+//                    characterCount2 += user_input.length();
+//
+//                if (MainController.i > 13 && MainController.i < 21)
+//                    characterCount3 += user_input.length();
+//        }
+//    }
+
+
     public void setCharacterCount(){
         if (userChoice == 1)
-            characterCount1 += user_input.length();
+            Player1.characterCount += user_input.length();
 
         if (userChoice == 2){
 
-                if (MainController.i < 7)
-                    characterCount2 += user_input.length();
+            if (MainController.i < 7)
+                Player1.characterCount += user_input.length();
 
-                else characterCount2 += user_input.length();
+            if (MainController.i > 6 && MainController.i < 14)
+                Player2.characterCount += user_input.length();
         }
 
         if (userChoice == 3) {
 
-                if (MainController.i < 7)
-                    characterCount3 += user_input.length();
+            if (MainController.i < 7)
+                Player1.characterCount += user_input.length();
 
-                if (MainController.i > 6 && MainController.i < 14)
-                    characterCount3 += user_input.length();
+            if (MainController.i > 6 && MainController.i < 14)
+                Player2.characterCount += user_input.length();
 
-                if (MainController.i > 13 && MainController.i < 21)
-                    characterCount3 += user_input.length();
-        }
+            if (MainController.i > 13 && MainController.i < 21)
+                Player3.characterCount += user_input.length();
+
+            }
     }
+
 
     public void playerSelection(int choice) {
         userChoice = choice;

@@ -16,38 +16,64 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" styleClass="game-background" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.TwoPlayerStatsController">
     <children>
-        <Label alignment="CENTER" layoutX="-11.0" layoutY="53.0" prefHeight="61.0" prefWidth="1321.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="LeaderBoard" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="-18.0" layoutY="77.0" prefHeight="61.0" prefWidth="1321.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="LeaderBoard" textFill="WHITE">
             <font>
                 <Font name="Arial Black" size="48.0" />
             </font>
         </Label>
       <Group layoutX="530.0" layoutY="385.0">
          <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" height="186.0" layoutX="130.0" layoutY="66.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="117.0" />
-                <Rectangle arcHeight="5.0" arcWidth="5.0" height="253.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="130.0" />
-                <Label layoutX="152.0" styleClass="text-color" stylesheets="@../../../Style.css" text="2nd" textFill="WHITE">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="226.0" layoutX="130.0" layoutY="66.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="117.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="292.0" stroke="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))" width="130.0" />
+                <Label layoutX="161.0" styleClass="text-color" stylesheets="@../../../Style.css" text="2nd" textFill="WHITE">
                     <font>
                         <Font name="Arial Black" size="36.0" />
                     </font>
                 </Label>
+            <Label fx:id="player1" alignment="CENTER" layoutX="-30.0" layoutY="144.0" prefHeight="70.0" prefWidth="190.0" rotate="270.0" style="-fx-text-fill: #000000;">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.7867298578199052">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7018666863441467" green="0.04699999839067459" blue="0.9399999976158142" opacity="0.7404580116271973" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="player2" alignment="CENTER" layoutX="96.0" layoutY="148.0" prefHeight="62.0" prefWidth="184.0" rotate="270.0" style="-fx-text-fill: #000000;">
+               <font>
+                  <Font name="Arial Black" size="36.0" />
+               </font>
+            </Label>
          </children>
       </Group>
-          <ImageView fitHeight="63.0" fitWidth="117.0" layoutX="669.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+          <ImageView fitHeight="63.0" fitWidth="117.0" layoutX="679.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
               <image>
                   <Image url="@../../../pngtree-silver-crown-on-white-image-clip-isolated-vector-png-image_36976608-removebg-preview.png" />
               </image>
           </ImageView>
-          <Label layoutX="553.0" layoutY="301.0" styleClass="text-color" stylesheets="@../../../Style.css" text="1st" textFill="WHITE">
+          <Label layoutX="557.0" layoutY="326.0" styleClass="text-color" stylesheets="@../../../Style.css" text="1st" textFill="WHITE">
               <font>
                   <Font name="Arial Black" size="36.0" />
               </font>
           </Label>
-        <ImageView fitHeight="78.0" fitWidth="130.0" layoutX="519.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="78.0" fitWidth="130.0" layoutX="525.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../pngtree-3d-texture-golden-crown-png-image_4364634-removebg-preview.png" />
             </image>
         </ImageView>
-        <Circle layoutX="519.0" layoutY="511.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
+        <Circle layoutX="530.0" layoutY="541.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
             <fill>
                 <LinearGradient endX="1.0" endY="1.0">
                     <stops>
@@ -64,15 +90,36 @@
                     </stops>
                 </LinearGradient>
             </fill></Circle>
-        <Label alignment="CENTER" layoutX="153.0" layoutY="447.0" prefHeight="130.0" prefWidth="213.0" stylesheets="@../../../Style.css" text="Player 1">
+        <Label alignment="CENTER" layoutX="147.0" layoutY="455.0" prefHeight="175.0" prefWidth="295.0" stylesheets="@../../../Style.css">
             <styleClass>
                 <String fx:value="border" />
                 <String fx:value="text-color" />
             </styleClass>
             <font>
                 <Font name="Calibri Bold" size="24.0" />
-            </font></Label>
-        <Circle layoutX="787.0" layoutY="542.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
+            </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="174.0" layoutY="487.0" prefHeight="47.0" prefWidth="147.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Accuracy">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="551.0" prefHeight="47.0" prefWidth="147.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="WPM">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="p1Acc" layoutX="335.0" layoutY="487.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="p1Wpm" layoutX="335.0" layoutY="551.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+        <Circle layoutX="787.0" layoutY="544.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE">
             <fill>
                 <LinearGradient endX="1.0" endY="1.0">
                     <stops>
@@ -90,16 +137,36 @@
                 </LinearGradient>
             </fill>
         </Circle>
-        <Line endX="100.0" layoutX="826.0" layoutY="542.0" startX="-28.0" stroke="WHITE" strokeWidth="2.0" />
-        <Label alignment="CENTER" layoutX="927.0" layoutY="476.0" prefHeight="130.0" prefWidth="213.0" stylesheets="@../../../Style.css" text="Player 2">
-            <styleClass>
-                <String fx:value="border" />
-                <String fx:value="text-color" />
-            </styleClass>
-            <font>
-                <Font name="Calibri Bold" size="24.0" />
-            </font>
-        </Label>
-        <Line endX="106.0" layoutX="402.0" layoutY="511.0" startX="-35.0" stroke="WHITE" strokeWidth="2.0" />
+        <Line endX="59.0" layoutX="826.0" layoutY="542.0" startX="-28.0" stroke="WHITE" strokeWidth="2.0" />
+        <Line endX="106.0" layoutX="413.0" layoutY="542.0" startX="30.0" stroke="WHITE" strokeWidth="2.0" />
+      <Label alignment="CENTER" layoutX="885.0" layoutY="455.0" prefHeight="175.0" prefWidth="295.0" stylesheets="@../../../Style.css">
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="text-color" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="903.0" layoutY="487.0" prefHeight="47.0" prefWidth="124.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Accuracy">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="908.0" layoutY="551.0" prefHeight="47.0" prefWidth="105.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="WPM">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="p2Acc" layoutX="1067.0" layoutY="487.0" prefHeight="47.0" prefWidth="74.0" styleClass="text-color" stylesheets="@../../../Style.css">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="p2Wpm" layoutX="1067.0" layoutY="550.0" prefHeight="47.0" prefWidth="76.0" styleClass="text-color" stylesheets="@../../../Style.css">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

@@ -1,4 +1,5 @@
 package com.example.finalproject;
 
-public class LeaderboardController {
+public class
+LeaderboardController {
 }

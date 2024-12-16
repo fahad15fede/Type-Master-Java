@@ -5,18 +5,18 @@ import javafx.scene.control.Label;
 
 public class SoloStatsController {
 
-    Details details = new Details();
-
     @FXML
     private Label accuracy;
 
     @FXML
     private Label wpm;
 
+    Player1 player1 = new Player1();
+
     @FXML
     public void initialize() {
-        wpm.setText(String.valueOf((int) details.getWpm()));
-        accuracy.setText(String.valueOf(details.getAccuracy()) + " % ");
+        wpm.setText(String.valueOf(player1.getWpm()));
+        accuracy.setText(String.valueOf(player1.getAccuracy()) + " % ");
     }
 
 }
