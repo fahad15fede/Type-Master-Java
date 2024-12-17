@@ -2,7 +2,7 @@ package com.example.finalproject;
 
 public class Player1 {
     public static double wordCount = 0;
-    public  double accuracy = 0;
+    public double accuracy = 0;
     public static int errorCount = 0;
     public static int characterCount = 0;
 

@@ -1,153 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="993.0" prefWidth="1357.0" styleClass="game-background" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#changeLevel" prefHeight="800.0" prefWidth="1357.0" styleClass="game-background" stylesheets="@../../../Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.MainController">
   <children>
-    <HBox layoutX="2.0" prefHeight="68.0" prefWidth="1315.0">
-      <children>
-        <Label prefHeight="79.0" prefWidth="414.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="TypeMaster">
-          <font>
-            <Font name="Arial Black" size="36.0" />
-          </font>
-          <HBox.margin>
-            <Insets />
-          </HBox.margin>
-          <padding>
-            <Insets left="20.0" />
-          </padding>
-          <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-              <stops>
-                <Stop>
-                  <color>
-                    <Color />
-                  </color>
-                </Stop>
-                <Stop offset="1.0">
-                  <color>
-                    <Color red="1.0" green="1.0" blue="1.0" />
-                  </color>
-                </Stop>
-              </stops>
-            </LinearGradient>
-          </textFill>
-        </Label>
-        <HBox prefHeight="68.0" prefWidth="278.0">
-          <children>
-            <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-              <HBox.margin>
-                <Insets top="20.0" />
-              </HBox.margin>
-            </ImageView>
-            <Label prefHeight="76.0" prefWidth="223.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Leaderboard">
-              <padding>
-                <Insets left="10.0" top="20.0" />
-              </padding>
-              <font>
-                <Font name="System Bold Italic" size="24.0" />
-              </font>
-            </Label>
-          </children>
-        </HBox>
-        <HBox layoutX="326.0" layoutY="10.0" prefHeight="68.0" prefWidth="316.0">
-          <children>
-            <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-              <HBox.margin>
-                <Insets top="18.0" />
-              </HBox.margin>
-            </ImageView>
-            <Label prefHeight="76.0" prefWidth="223.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Settings">
-              <padding>
-                <Insets left="10.0" top="20.0" />
-              </padding>
-              <font>
-                <Font name="System Bold Italic" size="24.0" />
-              </font>
-            </Label>
-          </children>
-        </HBox>
-        <HBox layoutX="626.0" layoutY="10.0" prefHeight="68.0" prefWidth="309.0">
-          <children>
-            <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-              <HBox.margin>
-                <Insets top="19.0" />
-              </HBox.margin>
-              <!--                            <image>-->
-              <!--                                <Image url="@person_24dp_FFF_FILL0_wght400_GRAD0_opsz24.png" />-->
-              <!--                            </image>-->
-            </ImageView>
-            <Label prefHeight="76.0" prefWidth="223.0" styleClass="text-color" stylesheets="@../../../Style.css" text="User">
-              <padding>
-                <Insets left="10.0" top="20.0" />
-              </padding>
-              <font>
-                <Font name="System Bold Italic" size="24.0" />
-              </font>
-            </Label>
-          </children>
-        </HBox>
-      </children>
-    </HBox>
-    <Label alignment="CENTER" layoutX="1.0" layoutY="142.0" prefHeight="118.0" prefWidth="1315.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Test Your Typing Skills">
+    <Label alignment="CENTER" layoutX="1.0" layoutY="99.0" prefHeight="118.0" prefWidth="1315.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Test Your Typing Skills">
       <font>
         <Font name="Arial Black" size="48.0" />
       </font>
     </Label>
-    <Circle fill="#1a1a1a" layoutX="397.0" layoutY="366.0" radius="68.0" stroke="#99ff84" strokeType="INSIDE" strokeWidth="5.0" />
-    <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutX="379.0" layoutY="326.0" styleClass="text-color" stylesheets="@../../../Style.css" textAlignment="CENTER" textFill="WHITE">
+    <Circle fill="#1a1a1a" layoutX="397.0" layoutY="320.0" radius="68.0" stroke="#99ff84" strokeType="INSIDE" strokeWidth="5.0" />
+      <Group layoutX="354.0" layoutY="279.0">
+         <children>
+          <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="85.0" styleClass="text-color" stylesheets="@../../../Style.css" textAlignment="CENTER" textFill="WHITE">
+            <font>
+              <Font name="System Bold" size="32.0" />
+            </font>
+          </Label>
+          <Label layoutX="9.0" layoutY="47.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Seconds" textFill="WHITE">
+            <font>
+              <Font name="System Bold Italic" size="18.0" />
+            </font>
+          </Label>
+         </children>
+      </Group>
+    <Label fx:id="turn" alignment="CENTER" layoutX="559.0" layoutY="272.0" prefHeight="99.0" prefWidth="153.0" stylesheets="@../../../Style.css" textFill="WHITE">
       <font>
         <Font name="System Bold" size="32.0" />
       </font>
     </Label>
-    <Label layoutX="365.0" layoutY="366.0" text="Seconds" textFill="WHITE">
+    <Label alignment="CENTER" layoutX="568.0" layoutY="382.0" prefHeight="27.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Turn">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label fx:id="turn" layoutX="545.0" layoutY="344.0" prefHeight="41.0" prefWidth="123.0" textFill="WHITE">
-      <font>
-        <Font name="System Bold" size="32.0" />
-      </font>
-    </Label>
-    <Label alignment="CENTER" layoutX="557.0" layoutY="426.0" prefHeight="27.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Turn">
+    <Label alignment="CENTER" layoutX="748.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Total char">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label fx:id="totalChar" layoutX="741.0" layoutY="344.0" textFill="WHITE">
-      <font>
-        <Font name="System Bold" size="32.0" />
-      </font>
-    </Label>
-    <Label fx:id="totalErrors" layoutX="903.0" layoutY="344.0" textFill="WHITE">
-      <font>
-        <Font name="System Bold" size="32.0" />
-      </font>
-    </Label>
-    <Label alignment="CENTER" layoutX="710.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Total char">
+    <Label alignment="CENTER" layoutX="920.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Error Count">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="862.0" layoutY="426.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Error Count">
-      <font>
-        <Font name="System Bold Italic" size="18.0" />
-      </font>
-    </Label>
-    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="693.0" onKeyPressed="#keyTyped" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="672.0" onKeyPressed="#keyTyped" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
       <styleClass>
         <String fx:value="game-background" />
         <String fx:value="border" />
@@ -157,7 +61,7 @@
         <Font size="20.0" />
       </font>
     </TextField>
-      <Button fx:id="btn" layoutX="71.0" layoutY="466.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
+      <Button fx:id="btn" layoutX="71.0" layoutY="438.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />
@@ -167,16 +71,16 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="givenSentence" layoutX="71.0" layoutY="520.0" prefHeight="126.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+      <Label fx:id="givenSentence" alignment="CENTER" layoutX="71.0" layoutY="500.0" prefHeight="126.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
          <styleClass>
             <String fx:value="text-color" />
             <String fx:value="border" />
          </styleClass>
          <font>
-            <Font name="System Bold Italic" size="18.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Button fx:id="result" layoutX="242.0" layoutY="466.0" mnemonicParsing="false" onAction="#showResult" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
+      <Button fx:id="result" layoutX="242.0" layoutY="438.0" mnemonicParsing="false" onAction="#showResult" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
          <styleClass>
             <String fx:value="border" />
             <String fx:value="game-background" />
@@ -186,6 +90,21 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="48.0" layoutY="25.0" prefHeight="60.0" prefWidth="265.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="TypeMaster">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalChar" alignment="CENTER" layoutX="748.0" layoutY="272.0" prefHeight="99.0" prefWidth="100.0" stylesheets="@../../../Style.css" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalErrors" alignment="CENTER" layoutX="920.0" layoutY="272.0" prefHeight="99.0" prefWidth="100.0" stylesheets="@../../../Style.css" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
   </children>
 
 

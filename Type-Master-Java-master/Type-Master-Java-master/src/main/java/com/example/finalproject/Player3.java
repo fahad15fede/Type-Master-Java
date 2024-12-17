@@ -2,7 +2,7 @@ package com.example.finalproject;
 
 public class Player3 {
     public static double wordCount = 0;
-    public  double accuracy = 0;
+    public double accuracy = 0;
     public static int errorCount = 0;
     public static int characterCount = 0;
 
@@ -20,6 +20,12 @@ public class Player3 {
 
     public double getAccuracy() {
         return accuracy;
+    }
+
+
+    public double getWpm() {
+//        return (Player2.characterCount) / (5.0 * details.getTimetaken1());
+        return Details.wpmP3;
     }
 
 }

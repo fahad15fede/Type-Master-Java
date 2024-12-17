@@ -58,8 +58,9 @@ public class Details {
 
 
     public void setAccuracy() {
-        if(userChoice == 1)
+        if(userChoice == 1) {
             accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
+        }
 
         if(userChoice == 2){
             accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
@@ -163,30 +164,16 @@ public class Details {
 //    }
 
 
-    public double getAccuracyForTwoPlayers(int choice) {
-        if(choice == 1) {
-            return accuracyp1;
-        } else {
-            return accuracyp2;
-        }
-    }
-
-    public double getWpmForTwoPlayers(int choice) {
-        if(choice == 1) {
-            return characterCount1/(5.0 * timetaken1);
-        } else {
-            return (characterCount1)/(5.0 * timetaken2);
-        }
-    }
 
 
-        public double getAccuracy(){
-            if(userChoice == 1) return accuracyp1;
-            if(userChoice == 2) return accuracyp2;
-            if(userChoice == 3) return accuracyp3;
 
-            else return 0;
-        }
+//        public double getAccuracy(){
+//            if(userChoice == 1) return accuracyp1;
+//            if(userChoice == 2) return accuracyp2;
+//            if(userChoice == 3) return accuracyp3;
+//
+//            else return 0;
+//        }
 
 
 

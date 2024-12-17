@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -74,6 +75,8 @@ public class MainController {
     @FXML
     void showResult(ActionEvent event) throws IOException {
         if(Details.userChoice == 1) {
+            new Player1().setAccuracy();
+            details.setWpm();
             Parent root = FXMLLoader.load(getClass().getResource("solo-stats.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -85,16 +88,18 @@ public class MainController {
             new Player1().setAccuracy();
             new Player2().setAccuracy();
             details.setWpm();
-//            showResult();
             Parent root = FXMLLoader.load(getClass().getResource("two-player-stats.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-
         }
 
         if(Details.userChoice == 3) {
+            new Player1().setAccuracy();
+            new Player2().setAccuracy();
+            new Player3().setAccuracy();
+            details.setWpm();
             Parent root = FXMLLoader.load(getClass().getResource("leaderBoard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -109,9 +114,18 @@ public class MainController {
     public Details details;
 
     @FXML
+    void changeLevel(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            onNext(new ActionEvent());
+        }
+
+    }
+
+
+
+
+    @FXML
     void onNext(ActionEvent event) {
-
-
 
         if(!userInput.getText().isEmpty() && userInput.getText().length() <= givenSentence.getText().length()) {
 
@@ -139,7 +153,9 @@ public class MainController {
                         totalChar.setText(Integer.toString(Player1.characterCount));
                         totalErrors.setText(Integer.toString(Player1.errorCount));
 //                details.setWpm(user_type);
+
                         if (i == 6) {
+
                             givenSentence.setText(wordGenerator.levels3[i]);
                             stopTimer();
                             double time = Double.valueOf(timer.getText());
@@ -156,8 +172,6 @@ public class MainController {
 
                         userInput.setText("");
                         i += 1;
-
-
                     }
 
                 }
@@ -302,6 +316,7 @@ public class MainController {
                 userInput.setEditable(false);
                 timer.setText("0");
                 btn.setVisible(false);
+                result.setVisible(true);
             }
         }
         private void stopTimer () {
@@ -311,4 +326,5 @@ public class MainController {
                 secondsLeft = 120;
             }
         }
+
 }

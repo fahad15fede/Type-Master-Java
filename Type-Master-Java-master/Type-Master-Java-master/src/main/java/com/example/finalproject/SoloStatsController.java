@@ -15,8 +15,8 @@ public class SoloStatsController {
 
     @FXML
     public void initialize() {
-        wpm.setText(String.valueOf(player1.getWpm()));
-        accuracy.setText(String.valueOf(player1.getAccuracy()) + " % ");
+        wpm.setText(String.format("%.2f", player1.getWpm()));
+        accuracy.setText(String.format("%.2f", player1.getAccuracy()));
     }
 
 }
