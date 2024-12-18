@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class MainController {
 
     WordGenerator wordGenerator = new WordGenerator();
-    private int secondsLeft = 10;
+    private int secondsLeft = 120;
     private boolean timerRunning = false;
     @FXML
     private Button btn;
@@ -49,13 +49,15 @@ public class MainController {
 
     @FXML
     private Button result;
-
+    @FXML
+    private Button playerTurn;
 
     public static int i = 0;
 
 
     @FXML
     public void initialize() {
+        playerTurn.setVisible(false);
         turn.setText("Player1");
         givenSentence.setText(wordGenerator.levels3[0]);
         totalChar.setText(Integer.toString(Player1.characterCount));
@@ -126,6 +128,7 @@ public class MainController {
                     String user_type = userInput.getText();
 
 
+
                     if (userInput.getText().length() > givenSentence.getText().length()) {
                         turn.setText(String.valueOf(givenSentence.getText().length()));
                         userInput.setText("");
@@ -184,7 +187,7 @@ public class MainController {
                         userInput.setEditable(false);
                         details.setAccuracy();
                         double time = Double.valueOf(timer.getText());
-                        details.setTimetaken2(120 - time);
+                        details.setTimetaken2(10 - time);
 
                     } else {
                         givenSentence.setText(wordGenerator.levels3[i + 1]);
@@ -304,31 +307,77 @@ public class MainController {
             if (secondsLeft > 0) {
                 timer.setText(String.valueOf(secondsLeft));
                 secondsLeft--;
-            } else if (secondsLeft == 0) {
+            }
+            else if (secondsLeft == 0) {
+                userInput.setEditable(false);
 
-//                if(Details.userChoice==1){
-                    userInput.setEditable(false);
-                    timer.setText("0");
-                    btn.setVisible(false);
-                    result.setVisible(true);
-                }
-                if(Details.userChoice==2){
-                    if(MainController.i<7)
-                    {
-                        i=7;
-                        userInput.setEditable(false);
-                        btn.setVisible(true);
-                        result.setVisible(false);
-
-                    }
-
+                timer.setText(String.valueOf(0));
+                btn.setVisible(false);
+                details.setTimetaken1(120);
+                details.setTimetaken2(120);
+                details.setTimetaken3(120);
+                if(Details.userChoice == 1 && i <= 6) result.setVisible(true);
+                if(Details.userChoice == 2 && i < 7) playerTurn.setVisible(true);
+                if(Details.userChoice == 2 && i > 6) result.setVisible(true);
+                if(Details.userChoice == 3 && i < 7) playerTurn.setVisible(true);
+                if(Details.userChoice == 3 && i > 6 && i < 14) playerTurn.setVisible(true);
+                if(Details.userChoice == 3 && i > 13) result.setVisible(true);
             }
         }
+    @FXML
+    void changePlayerTurn(ActionEvent event) {
+        if(secondsLeft == 0) {
+
+
+            if(Details.userChoice == 2  && i < 7) {
+                playerTurn.setVisible(false);
+                i = 7;
+//                    onNext(new ActionEvent());
+                userInput.setText("");
+                givenSentence.setText(wordGenerator.levels3[i]);
+                turn.setText("Player 2");
+                totalChar.setText(Integer.toString(Player2.characterCount));
+                totalErrors.setText(Integer.toString(Player2.errorCount));
+                userInput.setEditable(true);
+                btn.setVisible(true);
+                secondsLeft = 120;
+            }
+
+            if(Details.userChoice == 3  && i < 7) {
+                playerTurn.setVisible(false);
+                i = 7;
+//                    onNext(new ActionEvent());
+                userInput.setText("");
+                givenSentence.setText(wordGenerator.levels3[i]);
+                turn.setText("Player 2");
+                totalChar.setText(Integer.toString(Player2.characterCount));
+                totalErrors.setText(Integer.toString(Player2.errorCount));
+                userInput.setEditable(true);
+                btn.setVisible(true);
+                secondsLeft = 120;
+            }
+
+            if(Details.userChoice == 3  && i > 7 && i < 14) {
+                playerTurn.setVisible(false);
+                i = 14;
+                userInput.setText("");
+                givenSentence.setText(wordGenerator.levels3[i]);
+                turn.setText("Player 3");
+                totalChar.setText(Integer.toString(Player3.characterCount));
+                totalErrors.setText(Integer.toString(Player3.errorCount));
+                userInput.setEditable(true);
+                btn.setVisible(true);
+                secondsLeft = 120;
+            }
+
+        }
+
+    }
         private void stopTimer () {
             if (timeline != null) {
                 timeline.stop();
                 timerRunning = false;
-                secondsLeft = 10;
+                secondsLeft = 120;
             }
         }
 
