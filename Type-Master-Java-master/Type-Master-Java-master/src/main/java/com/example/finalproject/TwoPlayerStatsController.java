@@ -41,8 +41,6 @@ public class TwoPlayerStatsController {
 
     @FXML
     public void initialize() {
-//        p1Wpm.setText(String.valueOf(p2.getAccuracy()));
-//        p1Wpm.setText(String.valueOf(p2.getWpm1()));
         showDetails();
 
 
@@ -51,12 +49,14 @@ public class TwoPlayerStatsController {
     public void showDetails() {
         p1.setAccuracy();
         p2.setAccuracy();
+        p1.setWpm();
+        p2.setWpm();
 
         if(p1.getAccuracy() > p2.getAccuracy()) {
             p1Acc.setText(String.format("%.2f",p1.getAccuracy()));
             p2Acc.setText(String.format("%.2f",p2.getAccuracy()));
-            p1Wpm.setText(String.format("%.2f",p1.getWpm()));
-            p2Wpm.setText(String.format("%.2f",p2.getWpm()));
+            p1Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+            p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
             player1.setText("Player 1");
             player2.setText("Player 2");
         }
@@ -65,8 +65,8 @@ public class TwoPlayerStatsController {
         if(p1.getAccuracy() < p2.getAccuracy()) {
             p1Acc.setText(String.format("%.2f",p2.getAccuracy()));
             p2Acc.setText(String.format("%.2f",p1.getAccuracy()));
-            p1Wpm.setText(String.format("%.2f",p2.getWpm()));
-            p2Wpm.setText(String.format("%.2f",p1.getWpm()));
+            p1Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+            p2Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
             player2.setText("Player 1");
             player1.setText("Player 2");
         }

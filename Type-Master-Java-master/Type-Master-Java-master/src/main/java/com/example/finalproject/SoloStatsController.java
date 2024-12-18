@@ -26,8 +26,10 @@ public class SoloStatsController {
 
     @FXML
     public void initialize() {
-        wpm.setText(String.format("%.2f", player1.getWpm()));
-        accuracy.setText(String.format("%.2f", player1.getAccuracy()));
+        player1.setWpm();
+        player1.setAccuracy();
+        wpm.setText(Double.toString(Math.floor(player1.getWpm())));
+        accuracy.setText(String.format("%.2f", player1.getAccuracy())+" %");
     }
     @FXML
     void restart(ActionEvent event) throws IOException {

@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class MainController {
 
     WordGenerator wordGenerator = new WordGenerator();
-    private int secondsLeft = 120;
+    private int secondsLeft = 10;
     private boolean timerRunning = false;
     @FXML
     private Button btn;
@@ -53,12 +53,13 @@ public class MainController {
 
     public static int i = 0;
 
+
     @FXML
     public void initialize() {
         turn.setText("Player1");
         givenSentence.setText(wordGenerator.levels3[0]);
-        totalChar.setText(Integer.toString(Details.characterCount1));
-        totalErrors.setText(Integer.toString(Details.errorCountp1));
+        totalChar.setText(Integer.toString(Player1.characterCount));
+        totalErrors.setText(Integer.toString(Player1.errorCount));
         result.setVisible(false);
         userInput.textProperty().addListener((observable, oldValue, newValue) -> {
             // Check if the new value starts with a space
@@ -75,8 +76,6 @@ public class MainController {
     @FXML
     void showResult(ActionEvent event) throws IOException {
         if(Details.userChoice == 1) {
-            new Player1().setAccuracy();
-            details.setWpm();
             Parent root = FXMLLoader.load(getClass().getResource("solo-stats.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -85,9 +84,6 @@ public class MainController {
         }
 
         if (Details.userChoice == 2) {
-            new Player1().setAccuracy();
-            new Player2().setAccuracy();
-            details.setWpm();
             Parent root = FXMLLoader.load(getClass().getResource("two-player-stats.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -96,10 +92,6 @@ public class MainController {
         }
 
         if(Details.userChoice == 3) {
-            new Player1().setAccuracy();
-            new Player2().setAccuracy();
-            new Player3().setAccuracy();
-            details.setWpm();
             Parent root = FXMLLoader.load(getClass().getResource("leaderBoard.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
@@ -313,17 +305,30 @@ public class MainController {
                 timer.setText(String.valueOf(secondsLeft));
                 secondsLeft--;
             } else if (secondsLeft == 0) {
-                userInput.setEditable(false);
-                timer.setText("0");
-                btn.setVisible(false);
-                result.setVisible(true);
+
+//                if(Details.userChoice==1){
+                    userInput.setEditable(false);
+                    timer.setText("0");
+                    btn.setVisible(false);
+                    result.setVisible(true);
+                }
+                if(Details.userChoice==2){
+                    if(MainController.i<7)
+                    {
+                        i=7;
+                        userInput.setEditable(false);
+                        btn.setVisible(true);
+                        result.setVisible(false);
+
+                    }
+
             }
         }
         private void stopTimer () {
             if (timeline != null) {
                 timeline.stop();
                 timerRunning = false;
-                secondsLeft = 120;
+                secondsLeft = 10;
             }
         }
 

@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 public class Player2 {
     public static double wordCount = 0;
+    public double wpm=0;
     public double accuracy = 0;
     public static int errorCount = 0;
     public static int characterCount = 0;
@@ -26,12 +27,10 @@ public class Player2 {
 
 
     public double getWpm() {
-//        return (Player2.characterCount) / (5.0 * details.getTimetaken1());
-        return Details.wpmP2;
+        return this.wpm;
     }
 
-
-
-
-
+    public void setWpm() {
+        wpm=((double)(Player2.characterCount)/(5.0*Details.timetaken2));
+    }
 }
