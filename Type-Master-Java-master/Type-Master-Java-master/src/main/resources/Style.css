@@ -40,6 +40,13 @@
 .table-view .column-header .label {
     -fx-text-fill: #FFFFFF;
 }
+.restart-button{
+    -fx-background-color: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    -fx-border-radius 25px ;
+    -fx-background-radius :90px ;
+    -fx-text-fill : black;
+
+}
 
 
 

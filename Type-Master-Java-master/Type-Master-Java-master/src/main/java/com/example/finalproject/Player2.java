@@ -6,7 +6,6 @@ public class Player2 {
     public static int errorCount = 0;
     public static int characterCount = 0;
 
-//    Details details = new Details();
 
     Player2() {
     }
