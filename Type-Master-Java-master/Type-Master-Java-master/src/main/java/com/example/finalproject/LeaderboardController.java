@@ -65,41 +65,81 @@ public class LeaderboardController {
         p2.setWpm();
         p3.setWpm();
 
-        if(p1.getAccuracy() > p2.getAccuracy() && p2.getAccuracy() > p3.getAccuracy()) {
-            p1Acc.setText(String.format("%.2f",p1.getAccuracy()));
-            p2Acc.setText(String.format("%.2f",p2.getAccuracy()));
-            p3Acc.setText(String.format("%.2f", p3.getAccuracy()));
-            p1Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
-            p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
-            p3Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
-            player1.setText("Player 1");
-            player2.setText("Player 2");
-            player3.setText("Player 3");
+        if(p1.getAccuracy() > p2.getAccuracy() && p1.getAccuracy() > p3.getAccuracy()) {
+            if(p2.getAccuracy()> p3.getAccuracy()) {
+                p1Acc.setText(String.format("%.2f", p1.getAccuracy()) + " % ");
+                p2Acc.setText(String.format("%.2f", p2.getAccuracy()) + " % ");
+                p3Acc.setText(String.format("%.2f", p3.getAccuracy()) + " % ");
+                p1Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                player1.setText("Player 1");
+                player2.setText("Player 2");
+                player3.setText("Player 3");
+            }
+            else{
+                p1Acc.setText(String.format("%.2f", p1.getAccuracy()) + " % ");
+                p2Acc.setText(String.format("%.2f", p3.getAccuracy()) + " % ");
+                p3Acc.setText(String.format("%.2f", p2.getAccuracy()) + " % ");
+                p1Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                player1.setText("Player 1");
+                player2.setText("Player 2");
+                player3.setText("Player 3");
+            }
         }
 
-        if(p2.getAccuracy() > p1.getAccuracy() && p1.getAccuracy() > p3.getAccuracy()) {
-            p1Acc.setText(String.format("%.2f",p2.getAccuracy()));
-            p2Acc.setText(String.format("%.2f",p1.getAccuracy()));
-            p3Acc.setText(String.format("%.2f",p3.getAccuracy()));
-            p1Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
-            p2Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
-            p3Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
-            player1.setText("Player 2");
-            player2.setText("Player 1");
-            player3.setText("Player 3");
+        if(p2.getAccuracy() > p1.getAccuracy() && p2.getAccuracy() > p3.getAccuracy()) {
+            if(p1.getAccuracy()>p3.getAccuracy()){
+                p1Acc.setText(String.format("%.2f",p2.getAccuracy())+" % ");
+                p2Acc.setText(String.format("%.2f",p1.getAccuracy())+" % ");
+                p3Acc.setText(String.format("%.2f",p3.getAccuracy())+" % ");
+                p1Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                player1.setText("Player 2");
+                player2.setText("Player 1");
+                player3.setText("Player 3");
+            }
+            else{
+                p1Acc.setText(String.format("%.2f",p2.getAccuracy())+" % ");
+                p2Acc.setText(String.format("%.2f",p3.getAccuracy())+" % ");
+                p3Acc.setText(String.format("%.2f",p1.getAccuracy())+" % ");
+                p1Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                player1.setText("Player 2");
+                player2.setText("Player 1");
+                player3.setText("Player 3");
+            }
         }
 
-        if(p3.getAccuracy() > p2.getAccuracy() && p2.getAccuracy() > p1.getAccuracy()) {
-            p1Acc.setText(String.format("%.2f",p3.getAccuracy()));
-            p2Acc.setText(String.format("%.2f",p2.getAccuracy()));
-            p3Acc.setText(String.format("%.2f",p1.getAccuracy()));
-            p1Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
-            p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
-            p3Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
-            player1.setText("Player 3");
-            player2.setText("Player 2");
-            player3.setText("Player 1");
+        if(p3.getAccuracy() > p2.getAccuracy() && p3.getAccuracy() > p1.getAccuracy()) {
+            if(p2.getAccuracy()>p1.getAccuracy()) {
+                p1Acc.setText(String.format("%.2f", p3.getAccuracy()) + " % ");
+                p2Acc.setText(String.format("%.2f", p2.getAccuracy()) + " % ");
+                p3Acc.setText(String.format("%.2f", p1.getAccuracy()) + " % ");
+                p1Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                player1.setText("Player 3");
+                player2.setText("Player 2");
+                player3.setText("Player 1");
+            }
+            else{
+                p1Acc.setText(String.format("%.2f", p3.getAccuracy()) + " % ");
+                p2Acc.setText(String.format("%.2f", p1.getAccuracy()) + " % ");
+                p3Acc.setText(String.format("%.2f", p2.getAccuracy()) + " % ");
+                p1Wpm.setText(Double.toString(Math.floor(p3.getWpm())));
+                p2Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
+                p3Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
+                player1.setText("Player 3");
+                player2.setText("Player 2");
+                player3.setText("Player 1");
+            }
         }
+
 
     }
     @FXML

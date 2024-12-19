@@ -151,12 +151,12 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="p2Acc" layoutX="188.0" layoutY="32.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+            <Label fx:id="p2Acc" layoutX="188.0" layoutY="32.0" prefHeight="47.0" prefWidth="104.0" styleClass="text-color" stylesheets="@../../../Style.css">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="p2Wpm" layoutX="188.0" layoutY="96.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+            <Label fx:id="p2Wpm" layoutX="188.0" layoutY="96.0" prefHeight="47.0" prefWidth="104.0" styleClass="text-color" stylesheets="@../../../Style.css">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -184,7 +184,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="p1Acc" layoutX="188.0" layoutY="18.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+            <Label fx:id="p1Acc" layoutX="188.0" layoutY="18.0" prefHeight="47.0" prefWidth="108.0" styleClass="text-color" stylesheets="@../../../Style.css">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -217,7 +217,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="p3Acc" layoutX="188.0" layoutY="32.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+            <Label fx:id="p3Acc" layoutX="188.0" layoutY="32.0" prefHeight="47.0" prefWidth="104.0" styleClass="text-color" stylesheets="@../../../Style.css">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -229,7 +229,7 @@
             </Label>
          </children>
       </Group>
-      <Button layoutX="961.0" layoutY="685.0" mnemonicParsing="false" onAction="#restart" prefHeight="78.0" prefWidth="242.0" styleClass="restart-button" text="Try again">
+      <Button layoutX="961.0" layoutY="685.0" mnemonicParsing="false" onAction="#restart" prefHeight="78.0" prefWidth="242.0" styleClass="restart-button" text="Restart">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>

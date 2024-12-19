@@ -53,8 +53,8 @@ public class TwoPlayerStatsController {
         p2.setWpm();
 
         if(p1.getAccuracy() > p2.getAccuracy()) {
-            p1Acc.setText(String.format("%.2f",p1.getAccuracy()));
-            p2Acc.setText(String.format("%.2f",p2.getAccuracy()));
+            p1Acc.setText(String.format("%.2f",p1.getAccuracy())+" % ");
+            p2Acc.setText(String.format("%.2f",p2.getAccuracy())+" % ");
             p1Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
             p2Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
             player1.setText("Player 1");
@@ -63,8 +63,8 @@ public class TwoPlayerStatsController {
 
 
         if(p1.getAccuracy() < p2.getAccuracy()) {
-            p1Acc.setText(String.format("%.2f",p2.getAccuracy()));
-            p2Acc.setText(String.format("%.2f",p1.getAccuracy()));
+            p1Acc.setText(String.format("%.2f",p2.getAccuracy())+" % ");
+            p2Acc.setText(String.format("%.2f",p1.getAccuracy())+" % ");
             p1Wpm.setText(Double.toString(Math.floor(p2.getWpm())));
             p2Wpm.setText(Double.toString(Math.floor(p1.getWpm())));
             player2.setText("Player 1");

@@ -23,7 +23,7 @@ import java.util.Arrays;
 public class MainController {
 
     WordGenerator wordGenerator = new WordGenerator();
-    private int secondsLeft = 120;
+    private int secondsLeft = 90;
     private boolean timerRunning = false;
     @FXML
     private Button btn;
@@ -70,7 +70,6 @@ public class MainController {
                 userInput.setText(newValue.trim());
             }
         });
-//        String user_type = userInput.getText();
     }
 
 
@@ -103,7 +102,6 @@ public class MainController {
 
     }
 
-//    String[] inputArr = new String[99999];
 
     public Details details;
 
@@ -147,17 +145,16 @@ public class MainController {
                         details = new Details(wordGenerator.levels3[i], user_type);
                         totalChar.setText(Integer.toString(Player1.characterCount));
                         totalErrors.setText(Integer.toString(Player1.errorCount));
-//                details.setWpm(user_type);
 
                         if (i == 6) {
 
                             givenSentence.setText(wordGenerator.levels3[i]);
                             stopTimer();
                             double time = Double.valueOf(timer.getText());
-                            details.setTimetaken1(120 - time);
+                            details.setTimetaken1(90 - time);
                             btn.setVisible(false);
                             result.setVisible(true);
-//                    result.setText(String.valueOf(details.getTimetaken1()));
+
                             userInput.setEditable(false);
                             details.setAccuracy();
 
@@ -187,7 +184,7 @@ public class MainController {
                         userInput.setEditable(false);
                         details.setAccuracy();
                         double time = Double.valueOf(timer.getText());
-                        details.setTimetaken2(10 - time);
+                        details.setTimetaken2(90 - time);
 
                     } else {
                         givenSentence.setText(wordGenerator.levels3[i + 1]);
@@ -195,7 +192,7 @@ public class MainController {
 
                     if (i == 6) {
                         double time = Double.valueOf(timer.getText());
-                        details.setTimetaken1(120 - time);
+                        details.setTimetaken1(90 - time);
                         stopTimer();
                         details.setAccuracy();
                     }
@@ -233,14 +230,14 @@ public class MainController {
                             userInput.setEditable(false);
                             details.setAccuracy();
                             double time = Double.valueOf(timer.getText());
-                            details.setTimetaken3(120 - time);
+                            details.setTimetaken3(90 - time);
 
                         } else {
                             givenSentence.setText(wordGenerator.levels3[i + 1]);
                         }
                         if (i == 6) {
                             double time = Double.valueOf(timer.getText());
-                            details.setTimetaken1(120 - time);
+                            details.setTimetaken1(90 - time);
                             stopTimer();
                             details.setAccuracy();
                         }
@@ -249,7 +246,7 @@ public class MainController {
                             stopTimer();
                             details.setAccuracy();
                             double time = Double.valueOf(timer.getText());
-                            details.setTimetaken2(120 - time);
+                            details.setTimetaken2(90 - time);
                         }
 
                         if (i < 7) {
@@ -313,9 +310,9 @@ public class MainController {
 
                 timer.setText(String.valueOf(0));
                 btn.setVisible(false);
-                details.setTimetaken1(120);
-                details.setTimetaken2(120);
-                details.setTimetaken3(120);
+                details.setTimetaken1(90);
+                details.setTimetaken2(90);
+                details.setTimetaken3(90);
                 if(Details.userChoice == 1 && i <= 6) result.setVisible(true);
                 if(Details.userChoice == 2 && i < 7) playerTurn.setVisible(true);
                 if(Details.userChoice == 2 && i > 6) result.setVisible(true);
@@ -332,7 +329,6 @@ public class MainController {
             if(Details.userChoice == 2  && i < 7) {
                 playerTurn.setVisible(false);
                 i = 7;
-//                    onNext(new ActionEvent());
                 userInput.setText("");
                 givenSentence.setText(wordGenerator.levels3[i]);
                 turn.setText("Player 2");
@@ -340,13 +336,12 @@ public class MainController {
                 totalErrors.setText(Integer.toString(Player2.errorCount));
                 userInput.setEditable(true);
                 btn.setVisible(true);
-                secondsLeft = 120;
+                secondsLeft = 90;
             }
 
             if(Details.userChoice == 3  && i < 7) {
                 playerTurn.setVisible(false);
                 i = 7;
-//                    onNext(new ActionEvent());
                 userInput.setText("");
                 givenSentence.setText(wordGenerator.levels3[i]);
                 turn.setText("Player 2");
@@ -354,7 +349,7 @@ public class MainController {
                 totalErrors.setText(Integer.toString(Player2.errorCount));
                 userInput.setEditable(true);
                 btn.setVisible(true);
-                secondsLeft = 120;
+                secondsLeft = 90;
             }
 
             if(Details.userChoice == 3  && i > 7 && i < 14) {
@@ -367,7 +362,7 @@ public class MainController {
                 totalErrors.setText(Integer.toString(Player3.errorCount));
                 userInput.setEditable(true);
                 btn.setVisible(true);
-                secondsLeft = 120;
+                secondsLeft = 90;
             }
 
         }
@@ -377,7 +372,7 @@ public class MainController {
             if (timeline != null) {
                 timeline.stop();
                 timerRunning = false;
-                secondsLeft = 120;
+                secondsLeft = 90;
             }
         }
 

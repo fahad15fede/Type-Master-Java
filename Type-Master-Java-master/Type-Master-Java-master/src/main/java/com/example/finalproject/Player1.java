@@ -10,9 +10,6 @@ public class Player1 {
 
     }
 
-
-
-
     public void setAccuracy() {
         this.accuracy = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
     }
@@ -22,7 +19,7 @@ public class Player1 {
     }
 
     public void setWpm(){
-        this.wpm=((double) (Player1.characterCount)/(5.0*Details.timetaken1));
+        this.wpm=( (Player1.characterCount)/(5.0*Details.timetaken1));
     }
 
     public double getWpm() {

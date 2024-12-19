@@ -16,15 +16,15 @@
         <Font name="Arial Black" size="48.0" />
       </font>
     </Label>
-    <Circle fill="#1a1a1a" layoutX="397.0" layoutY="320.0" radius="68.0" stroke="#99ff84" strokeType="INSIDE" strokeWidth="5.0" />
+    <Circle fill="#1a1a1a" layoutX="398.0" layoutY="360.0" radius="68.0" stroke="#99ff84" strokeType="INSIDE" strokeWidth="5.0" />
       <Group layoutX="354.0" layoutY="279.0">
          <children>
-          <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="85.0" styleClass="text-color" stylesheets="@../../../Style.css" textAlignment="CENTER" textFill="WHITE">
+          <Label fx:id="timer" alignment="CENTER" contentDisplay="CENTER" layoutY="47.0" prefHeight="47.0" prefWidth="85.0" styleClass="text-color" stylesheets="@../../../Style.css" textAlignment="CENTER" textFill="WHITE">
             <font>
               <Font name="System Bold" size="32.0" />
             </font>
           </Label>
-          <Label layoutX="9.0" layoutY="47.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Seconds" textFill="WHITE">
+          <Label layoutX="9.0" layoutY="95.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Seconds" textFill="WHITE">
             <font>
               <Font name="System Bold Italic" size="18.0" />
             </font>
@@ -36,22 +36,22 @@
         <Font name="System Bold" size="32.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="568.0" layoutY="382.0" prefHeight="27.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Turn">
+    <Label alignment="CENTER" layoutX="568.0" layoutY="382.0" prefHeight="27.0" prefWidth="100.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Turn">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="748.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Total char">
+    <Label alignment="CENTER" layoutX="748.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Total char">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <Label alignment="CENTER" layoutX="920.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="text-color" stylesheets="@../../../Style.css" text="Error Count">
+    <Label alignment="CENTER" layoutX="920.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="Error Count">
       <font>
         <Font name="System Bold Italic" size="18.0" />
       </font>
     </Label>
-    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="672.0" onKeyPressed="#keyTyped" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+    <TextField fx:id="userInput" alignment="CENTER" layoutX="71.0" layoutY="528.0" onKeyPressed="#keyTyped" prefHeight="68.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
       <styleClass>
         <String fx:value="game-background" />
         <String fx:value="border" />
@@ -61,17 +61,12 @@
         <Font size="20.0" />
       </font>
     </TextField>
-      <Button fx:id="btn" layoutX="71.0" layoutY="438.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Next">
-         <styleClass>
-            <String fx:value="border" />
-            <String fx:value="game-background" />
-            <String fx:value="text-color" />
-         </styleClass>
+      <Button fx:id="btn" layoutX="599.0" layoutY="624.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="143.0" styleClass="restart-button" stylesheets="@../../../Style.css" text="Next">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="givenSentence" alignment="CENTER" layoutX="71.0" layoutY="500.0" prefHeight="126.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
+      <Label fx:id="givenSentence" alignment="CENTER" layoutX="71.0" layoutY="436.0" prefHeight="82.0" prefWidth="1190.0" stylesheets="@../../../Style.css">
          <styleClass>
             <String fx:value="text-color" />
             <String fx:value="border" />
@@ -80,19 +75,14 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <Button fx:id="result" layoutX="242.0" layoutY="438.0" mnemonicParsing="false" onAction="#showResult" prefHeight="27.0" prefWidth="143.0" stylesheets="@../../../Style.css" text="Result">
-         <styleClass>
-            <String fx:value="border" />
-            <String fx:value="game-background" />
-            <String fx:value="text-color" />
-         </styleClass>
+      <Button fx:id="result" layoutX="1117.0" layoutY="640.0" mnemonicParsing="false" onAction="#showResult" prefHeight="27.0" prefWidth="143.0" styleClass="restart-button" stylesheets="@../../../Style.css" text="Result">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
       <Label layoutX="48.0" layoutY="25.0" prefHeight="60.0" prefWidth="265.0" styleClass="logo-text" stylesheets="@../../../Style.css" text="TypeMaster">
          <font>
-            <Font name="Arial Black" size="36.0" />
+            <Font name="Arial Black" size="28.0" />
          </font>
       </Label>
       <Label fx:id="totalChar" alignment="CENTER" layoutX="748.0" layoutY="272.0" prefHeight="99.0" prefWidth="100.0" stylesheets="@../../../Style.css" textFill="WHITE">
@@ -105,7 +95,10 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Button fx:id="playerTurn" layoutX="155.0" layoutY="240.0" mnemonicParsing="false" onAction="#changePlayerTurn" styleClass="restart-button" text="Next Player" />
+      <Button fx:id="playerTurn" layoutX="601.0" layoutY="687.0" mnemonicParsing="false" onAction="#changePlayerTurn" prefHeight="40.0" prefWidth="143.0" styleClass="restart-button" text="Next Player">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
   </children>
 
 

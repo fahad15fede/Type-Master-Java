@@ -5,25 +5,6 @@ public class WordGenerator {
     public WordGenerator(){
 
     }
-        public void mogger() {
-        int numberOfLevels = new Details().getUserChoice();
-        if (numberOfLevels == 7) {
-            String[] levels = new String[]{level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()};
-        } else if (numberOfLevels == 14) {
-            String[] levels = new String[]{level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
-                    level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()};
-        } else if (numberOfLevels == 21) {
-            String[] levels = new String[]{level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
-                    level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
-                    level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()
-            };
-        } else {
-            String[] levels = new String[]{level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()};
-
-        }
-    }
-
-
 
     public String level1_stage1(){
        String [] fourLetterword = new String[6];
@@ -131,10 +112,6 @@ public class WordGenerator {
 
 
     }
-    public String[] levels1 = new String[] {level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()};
-    public String[] levels2 = new String[] {level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
-            level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()
-    };
     public String[] levels3 = new String[] {level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
             level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1(),
             level1_stage1(), level1_stage2(), level2_stage1(), level2_stage2(), level3_stage1(), level3_stage2(), level4_stage1()

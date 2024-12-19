@@ -169,7 +169,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="983.0" layoutY="686.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#restart" prefHeight="78.0" prefWidth="242.0" styleClass="restart-button" text="Try again">
+      <Button layoutX="983.0" layoutY="686.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#restart" prefHeight="78.0" prefWidth="242.0" styleClass="restart-button" text="Restart">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>

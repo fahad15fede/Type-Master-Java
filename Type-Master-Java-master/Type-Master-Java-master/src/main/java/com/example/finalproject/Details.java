@@ -50,13 +50,6 @@ public class Details {
 
     }
 
-    public double getErrorCount() {
-        if(userChoice == 1) return Player1.errorCount;
-        if(userChoice == 2) return Player2.errorCount;
-        if(userChoice == 3) return Player3.errorCount;
-        return 0;
-    }
-
 
     public void setErrorCount(){
         for (int i = 0; i < user_input.length(); i++) {
@@ -100,39 +93,6 @@ public class Details {
     public void setTimetaken3(double timetaken3) {
         this.timetaken3 = timetaken3/60;
     }
-
-    public double getTimetaken1() {
-        return timetaken1;
-    }
-    public double getTimetaken2() {
-        return timetaken2;
-    }
-    public double getTimetaken3() {
-        return timetaken3;
-    }
-
-
-
-
-
-//    public void setWpm() {
-//        if (userChoice == 1) {
-//            wpmP1 = (int)((Player1.characterCount)/(5.0*getTimetaken1()));
-//        }
-//
-//        if (userChoice == 2) {
-//            wpmP1 = (Player1.characterCount)/(5.0*getTimetaken1());
-//            wpmP2 =  (Player2.characterCount)/(5.0*getTimetaken2());
-//        }
-//
-//        if (userChoice == 3) {
-//            wpmP1 = (Player1.characterCount)/(5.0*getTimetaken1());
-//            wpmP2 =  (Player2.characterCount)/(5.0*getTimetaken2());
-//            wpmP3 =  (Player3.characterCount)/(5.0*getTimetaken3());
-//        }
-//    }
-
-
 
 
     public void setCharacterCount(){
