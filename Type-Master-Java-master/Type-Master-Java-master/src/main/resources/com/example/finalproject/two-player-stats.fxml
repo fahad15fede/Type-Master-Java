@@ -110,7 +110,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="p1Acc" layoutX="335.0" layoutY="487.0" prefHeight="47.0" prefWidth="72.0" styleClass="text-color" stylesheets="@../../../Style.css">
+      <Label fx:id="p1Acc" layoutX="335.0" layoutY="487.0" prefHeight="47.0" prefWidth="96.0" styleClass="text-color" stylesheets="@../../../Style.css">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -159,7 +159,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="p2Acc" layoutX="1067.0" layoutY="487.0" prefHeight="47.0" prefWidth="74.0" styleClass="text-color" stylesheets="@../../../Style.css">
+      <Label fx:id="p2Acc" layoutX="1067.0" layoutY="487.0" prefHeight="47.0" prefWidth="96.0" styleClass="text-color" stylesheets="@../../../Style.css">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

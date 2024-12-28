@@ -2,9 +2,6 @@ package com.example.finalproject;
 
 public class Details {
     public static int userChoice;
-    private double accuracyp1;
-    private double accuracyp2;
-    private double accuracyp3;
 
 
 
@@ -32,23 +29,6 @@ public class Details {
     }
 
 
-    public void setAccuracy() {
-        if(userChoice == 1) {
-            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
-        }
-
-        if(userChoice == 2){
-            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
-            accuracyp2 = (((double) (Player2.characterCount - Player2.errorCount) / Player2.characterCount)*100);
-        }
-
-        if(userChoice == 3){
-            accuracyp1 = (((double) (Player1.characterCount - Player1.errorCount) / Player1.characterCount)*100);
-            accuracyp2 = (((double) (Player2.characterCount - Player2.errorCount) / Player2.characterCount)*100);
-            accuracyp3 = (((double) (Player3.characterCount - Player3.errorCount) / Player3.characterCount)*100);
-        }
-
-    }
 
 
     public void setErrorCount(){

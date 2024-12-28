@@ -73,8 +73,8 @@ public class WordGenerator {
         String [] compoundSentence= new String[5];
 
         compoundSentence[0]="Hey everyone, How's it Going? Look a bit dull all of you.";
-        compoundSentence[1]="Oh come on, Let's lighten up the mood everyone,what,s wrong?";
-        compoundSentence[2]="Oh and um, you guys ,you are the real heroes.";
+        compoundSentence[1]="Oh come on, Let's lighten up the mood everyone, what's wrong?";
+        compoundSentence[2]="Oh and um, you guys, you are the real heroes.";
         compoundSentence[3] = "The world is full of opportunities for those who seek.";
         compoundSentence[4] = "Dreams are built with passion, determination, and endless perseverance.";
 

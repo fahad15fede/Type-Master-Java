@@ -1,5 +1,8 @@
 package com.example.finalproject;
 
+import javafx.application.Application;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -127,12 +130,6 @@ public class MainController {
 
 
 
-                    if (userInput.getText().length() > givenSentence.getText().length()) {
-                        turn.setText(String.valueOf(givenSentence.getText().length()));
-                        userInput.setText("");
-                        user_type = userInput.getText();
-
-                    } else {
 
                         userInput.textProperty().addListener((observable, oldValue, newValue) -> {
                             // Check if the new value starts with a space
@@ -156,7 +153,6 @@ public class MainController {
                             result.setVisible(true);
 
                             userInput.setEditable(false);
-                            details.setAccuracy();
 
                         } else {
                             givenSentence.setText(wordGenerator.levels3[i + 1]);
@@ -164,7 +160,6 @@ public class MainController {
 
                         userInput.setText("");
                         i += 1;
-                    }
 
                 }
 
@@ -182,7 +177,6 @@ public class MainController {
                         result.setVisible(true);
                         stopTimer();
                         userInput.setEditable(false);
-                        details.setAccuracy();
                         double time = Double.valueOf(timer.getText());
                         details.setTimetaken2(90 - time);
 
@@ -194,7 +188,6 @@ public class MainController {
                         double time = Double.valueOf(timer.getText());
                         details.setTimetaken1(90 - time);
                         stopTimer();
-                        details.setAccuracy();
                     }
 
                     if (i < 7) {
@@ -228,7 +221,6 @@ public class MainController {
                             result.setVisible(true);
                             stopTimer();
                             userInput.setEditable(false);
-                            details.setAccuracy();
                             double time = Double.valueOf(timer.getText());
                             details.setTimetaken3(90 - time);
 
@@ -239,12 +231,10 @@ public class MainController {
                             double time = Double.valueOf(timer.getText());
                             details.setTimetaken1(90 - time);
                             stopTimer();
-                            details.setAccuracy();
                         }
 
                         if (i == 13) {
                             stopTimer();
-                            details.setAccuracy();
                             double time = Double.valueOf(timer.getText());
                             details.setTimetaken2(90 - time);
                         }
@@ -272,6 +262,13 @@ public class MainController {
                     }
                 }
 
+        }
+        else{
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Alert Dialog");
+            alert.setHeaderText(null);
+            alert.setContentText("Enter Your Words Accurately. The length of Sentence is out of bound :(");
+            alert.showAndWait();
         }
 
     }
